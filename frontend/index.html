@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador Cuántico de patrones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Generador Cuántico de Imágenes</h2>
+
+        <label for="patternType">Tipo de patrón:</label>
+        <select id="patternType" onchange="toggleWordInput()">
+            <option value="simple">Simple</option>
+            <option value="circular">Circular</option>
+            <option value="waves">Waves</option>
+            <option value="checkerboard">Checkerboard</option>
+            <option value="word">Palabra</option>
+        </select><br>
+
+        <div id="wordDiv" style="display:none;">
+            <label for="word">Palabra (solo para 'Palabra'):</label>
+            <input type="text" id="word" placeholder="Ej: Quantum">
+        </div>
+
+        <label for="width">Ancho (ej. 32):</label>
+        <input type="number" id="width" placeholder="Ej: 32">
+
+        <label for="height">Alto (ej. 32):</label>
+        <input type="number" id="height" placeholder="Ej: 32">
+
+        <button onclick="generatePattern()">Generar Imagen Cuántica</button>
+
+        <div id="loadingMessage" class="loading-container">
+            <div class="atom-loader">
+                <div class="nucleus"></div>
+                <div class="orbit">
+                    <div class="electron electron-1"></div>
+                    <div class="electron electron-2"></div>
+                    <div class="electron electron-3"></div>
+                </div>
+            </div>
+            <p class="loading-text" ><span id="toggleText">Generando imagen cuántica ...</span><br>Este proceso puede tardar debido a la simulación, no es una computadora cuántica real.</p>
+        </div>
+
+        <div id="errorMessage">
+            Hubo un error generando la imagen. Intenta nuevamente.
+        </div>
+
+        <div>
+            <img id="resultImage" src="" alt="Imagen generada cuánticamente">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
