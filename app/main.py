@@ -6,9 +6,10 @@ app = FastAPI(title="Quantum Pattern API")
 
 # Configurar CORS
 origins = [
-    "http://localhost",  # Permite solicitudes desde localhost
-    "http://127.0.0.1",  # Permite solicitudes desde localhost usando 127.0.0.1
+    "http://localhost",
+    "http://127.0.0.1",
     "https://daleth-barreto.github.io/QuantumPatternsApi/",
+    "https://quantumpatternsapi.onrender.com", 
 ]
 
 app.add_middleware(
