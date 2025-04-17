@@ -2,22 +2,16 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import patterns
 
+# Crear la aplicación FastAPI
 app = FastAPI(title="Quantum Pattern API")
 
 # Configurar CORS
-origins = [
-    "http://localhost",
-    "http://127.0.0.1",
-    "https://daleth-barreto.github.io/QuantumPatternsApi/",
-    "https://quantumpatternsapi.onrender.com", 
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Lista de orígenes permitidos
+    allow_origins=["*"],  # Lista de orígenes permitidos
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  # Permitir cualquier método (GET, POST, etc.)
+    allow_headers=["*"],  # Permitir cualquier cabecera
 )
 
 # Incluir las rutas de patrones

@@ -19,7 +19,7 @@ async function generatePattern() {
     document.getElementById("resultImage").style.display = "none";
 
     try {
-        const response = await fetch("https://quantumpatternsapi.onrender.com/patterns/generate", {
+        const response = await fetch("http://127.0.0.1:8000/patterns/generate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
