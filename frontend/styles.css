@@ -96,7 +96,7 @@ button:hover {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #a8b2d1;
+    background-color: #ccd6f6;
 }
 .orbit {
     position: absolute;
@@ -127,6 +127,12 @@ button:hover {
     transform: translateX(-50%);
     animation: electron-orbit-3 3s linear infinite;
 }
+.electron-4 {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: electron-orbit-4 3s linear infinite;
+}
 .loading-text {
     color: #a8b2d1;
     font-size: 0.9rem;
@@ -143,15 +149,20 @@ button:hover {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
+
 @keyframes electron-orbit-1 {
-    0% { transform: translateX(-50%) rotate(0deg) translateY(-40px); }
-    100% { transform: translateX(-50%) rotate(360deg) translateY(-40px); }
-}
-@keyframes electron-orbit-2 {
-    0% { transform: translateY(-50%) rotate(0deg) translateX(40px); }
-    100% { transform: translateY(-50%) rotate(360deg) translateX(40px); }
+    0% { transform: translateX(-50%) rotate(0deg) translateY(-30px); }
+    100% { transform: translateX(-50%) rotate(360deg) translateY(-34px); }
 }
 @keyframes electron-orbit-3 {
-    0% { transform: translateX(-50%) rotate(0deg) translateY(40px); }
+    0% { transform: translateX(-50%) rotate(0deg) translateY(36px); }
     100% { transform: translateX(-50%) rotate(360deg) translateY(40px); }
+}
+@keyframes electron-orbit-2 {
+    0% { transform: translateX(-50%) rotate(0deg) translateX(42px); }
+    100% { transform: translateX(-50%) rotate(360deg) translateX(38px); }
+}
+@keyframes electron-orbit-4 {
+    0% { transform: translateX(-50%) rotate(0deg) translateX(-40px); }
+    100% { transform: translateX(-50%) rotate(360deg) translateX(-35px); }
 }
