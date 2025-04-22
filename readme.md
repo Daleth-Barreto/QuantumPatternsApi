@@ -79,7 +79,7 @@ QuantumPatternsApi/
 
 ## 🤝 Contributing
 
-We ❤️ contributions! If you'd like to improve this project:
+I ❤️ contributions! If you'd like to improve this project:
 
 1. Fork the repository.
 2. Create a feature branch.
