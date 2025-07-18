@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Generador Cuántico de patrones</title>
+    <title>Quantum Pattern Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>Generador Cuántico de Imágenes</h2>
+        <h2>Quantum Image Generator</h2>
 
-        <label for="patternType">Tipo de patrón:</label>
+        <label for="patternType">Pattern type:</label>
         <select id="patternType" onchange="toggleWordInput()">
             <option value="simple">Simple</option>
             <option value="circular">Circular</option>
             <option value="waves">Waves</option>
             <option value="checkerboard">Checkerboard</option>
-            <option value="word">Palabra</option>
+            <option value="word">Word</option>
         </select><br>
 
         <div id="wordDiv" style="display:none;">
-            <label for="word">Palabra (solo para 'Palabra'):</label>
-            <input type="text" id="word" placeholder="Ej: Quantum">
+            <label for="word">Word (only for 'Word' pattern):</label>
+            <input type="text" id="word" placeholder="E.g.: Quantum">
         </div>
 
-        <label for="width">Ancho (ej. 32):</label>
-        <input type="number" id="width" placeholder="Ej: 32">
+        <label for="width">Width (e.g. 32):</label>
+        <input type="number" id="width" placeholder="E.g.: 32">
 
-        <label for="height">Alto (ej. 32):</label>
-        <input type="number" id="height" placeholder="Ej: 32">
+        <label for="height">Height (e.g. 32):</label>
+        <input type="number" id="height" placeholder="E.g.: 32">
 
-        <button onclick="generatePattern()">Generar Imagen Cuántica</button>
+        <button onclick="generatePattern()">Generate Quantum Image</button>
 
         <div id="loadingMessage" class="loading-container">
             <div class="atom-loader">
@@ -41,15 +41,18 @@
                     <div class="electron electron-4"></div>
                 </div>
             </div>
-            <p class="loading-text" ><span id="toggleText">Generando imagen cuántica ...</span><br>Este proceso puede tardar debido a la simulación, no es una computadora cuántica real.</p>
+            <p class="loading-text">
+                <span id="toggleText">Generating quantum image ...</span><br>
+                This process may take some time due to simulation. It’s not running on a real quantum computer.
+            </p>
         </div>
 
         <div id="errorMessage">
-            Hubo un error generando la imagen. Intenta nuevamente.
+            There was an error generating the image. Please try again.
         </div>
 
         <div>
-            <img id="resultImage" src="" alt="Imagen generada cuánticamente">
+            <img id="resultImage" src="" alt="Quantum-generated image">
         </div>
     </div>
 
